@@ -1,8 +1,15 @@
+import { Dropdown, DropdownItem } from "flowbite-react";
 import React from "react";
 
 const Hero = () => {
   return (
     <header className="text-center">
+      <Dropdown label="Dropdown button" dismissOnClick={false}>
+        <DropdownItem>Dashboard</DropdownItem>
+        <DropdownItem>Settings</DropdownItem>
+        <DropdownItem>Earnings</DropdownItem>
+        <DropdownItem>Sign out</DropdownItem>
+      </Dropdown>
       <img
         src="./banner2.png"
         alt="Hero Banner"
