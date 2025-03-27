@@ -1,7 +1,14 @@
-import React from "react";
+import HomePage from "./components/HomePage";
 
-const App = () => {
-  return <div></div>;
-};
+function App() {
+  return (
+    <main>
+      <div className="pattern" />
+      <div className="wrapper">
+        <HomePage />
+      </div>
+    </main>
+  );
+}
 
 export default App;
