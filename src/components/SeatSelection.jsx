@@ -35,9 +35,9 @@ const SeatSelection = () => {
 
   return (
     <div className="flex flex-row items-center justify-evenly h-full">
-      {/* Movie Details Section */}
       <div className="w-1/3 p-4 flex flex-col text-white ">
         <div className=" flex flex-row ">
+          {/* Movie Details Section */}
           <div className="w-40 h-50 rounded-lg mb-4 bg-[#171718]">
             <img
               src="/movie-poster.png"
@@ -52,13 +52,13 @@ const SeatSelection = () => {
             <p className="text-lg font-semibold">200.00 PHP</p>
           </div>
         </div>
-        <div className="flex flex-row items-end justify-between ">
-          <Button text="Back" />
-          <Button text="Next" />
-        </div>
-        <p className=" text-white text-lg font-semibold mt-4">
+        <p className=" text-white text-lg font-semibold">
           Selected Seats: {selectedSeats.join(", ") || "None"}
         </p>
+        <div className="flex flex-row items-end justify-between ">
+          <Button text="Back" link="/payment" />
+          <Button text="Next" link="/payment" />
+        </div>
       </div>
 
       <div className="flex flex-col items-center justify-evenly h-full ">
