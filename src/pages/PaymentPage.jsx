@@ -58,8 +58,8 @@ const PaymentPage = () => {
                 <h2 className="text-xl font-bold">₱ 200.00</h2>
               </div>
               <div className="flex flex-row items-end justify-between mt-4">
-                <Button text="Back" link="/confirmation" />
-                <Button text="Next" />
+                <Button text="Back" link="/select-seat" />
+                <Button text="Next" link="/confirmation" />
               </div>
             </div>
           </div>
