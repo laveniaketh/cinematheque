@@ -17,12 +17,12 @@ const Hero = () => {
           <p className="text-md font-light text-white dark:text-[#777777] px-64 ">
             A CAREFULLY CURATED FILMS FOR ALL
           </p>
-          <p className=" text-md font-light text-white dark:text-[#777777] px-64">
+          <p className=" text-md font-light text-white dark:text-[#777777] px-64 mb-4">
             showcases independent, classNameic, and world cinema, serving as a
             hub for film communities to nurture local filmmakers and support
             local stories and narratives.
           </p>
-          <Button text="Buy a ticket" />
+          <Button text="Buy a ticket" link="/select-movie" />
         </header>
       </div>
     </div>
