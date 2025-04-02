@@ -3,7 +3,7 @@ import Button from "../components/Button";
 
 const PaymentPage = () => {
   return (
-    <div className="wrapper">
+    <div className="px-5 lg:py-12 xl:py-15 h-screen flex flex-col relative z-10">
       <h1 className="text-6xl font-black leading-none tracking-tight text-gray-900 dark:text-white">
         <span className="text-gradient">Payment</span> Details
       </h1>

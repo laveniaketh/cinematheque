@@ -4,12 +4,12 @@ import Button from "../components/Button";
 const Hero = () => {
   return (
     <div>
-      <div className="wrapper">
+      <div className="px-5 py-12 h-screen mx-auto  flex flex-col relative z-10">
         <header className="text-center">
           <img
             src="./banner2.png"
             alt="Hero Banner"
-            className="w-full max-w-4xl h-auto object-contain mx-auto drop-shadow-md"
+            className="w-full max-w-4xl lg:max-w-6xl xl:max-w-7xl  h-auto object-contain mx-auto drop-shadow-md"
           />
           <h1 className="mb-2 text-6xl font-black leading-none tracking-tight text-gray-900 md:text-5xl lg:text-8xl dark:text-white">
             <span className="text-gradient">Cinema</span>theque

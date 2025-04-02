@@ -26,7 +26,7 @@ const PosterCarousel = ({ setSwiperInstance, swiperInstance }) => {
         className="h-[18rem]" // Increased height
       >
         <SwiperSlide className="!w-[12rem] !h-[18rem] flex justify-center items-center">
-          <Link to="/payment">
+          <Link to="/select-seat">
             <img
               src="/in the mood for love poster.jpg"
               alt="slide_image"
@@ -35,7 +35,7 @@ const PosterCarousel = ({ setSwiperInstance, swiperInstance }) => {
           </Link>
         </SwiperSlide>
         <SwiperSlide className="!w-[12rem] !h-[18rem] flex justify-center items-center">
-          <Link to="/payment">
+          <Link to="/select-seat">
             <img
               src="/happy together poster.jpg"
               alt="slide_image"
@@ -44,7 +44,7 @@ const PosterCarousel = ({ setSwiperInstance, swiperInstance }) => {
           </Link>
         </SwiperSlide>
         <SwiperSlide className="!w-[12rem] !h-[18rem] flex justify-center items-center">
-          <Link to="/payment">
+          <Link to="/select-seat">
             <img
               src="/fallen angels poster.jpg"
               alt="slide_image"

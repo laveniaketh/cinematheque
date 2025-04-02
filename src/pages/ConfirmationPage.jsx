@@ -5,7 +5,7 @@ import Button from "../components/Button";
 
 const ConfirmationPage = () => {
   return (
-    <div className="wrapper">
+    <div className="px-5 pt-30 flex flex-col relative z-10">
       <div className="flex flex-row items-center justify-center h-full px-20 py-1">
         <img
           src="./ticket.svg"
@@ -16,7 +16,7 @@ const ConfirmationPage = () => {
           <span className="text-gradient">Booked</span> Successfully
         </h1>
       </div>
-      <div className="m-7 text-center flex flex-col items-center justify-center h-full">
+      <div className="mt-20 text-center flex flex-col items-center justify-center h-full">
         <CountdownTimer />
         <Button text="Back to Home" link="/" />
       </div>
