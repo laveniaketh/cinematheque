@@ -5,8 +5,7 @@ import { EffectCoverflow, Controller } from "swiper/modules";
 import { Link } from "react-router-dom";
 
 const PosterCarousel = ({ movies, setSwiperInstance, swiperInstance }) => {
-  const baseURL = "http://localhost:8000"; // Base URL for the backend
-
+  const baseURL = "http://localhost:8000";
   return (
     <div className="w-[30rem] px-6 py-10 mx-auto">
       <Swiper
@@ -30,10 +29,7 @@ const PosterCarousel = ({ movies, setSwiperInstance, swiperInstance }) => {
             key={index}
             className="!w-[12rem] !h-[18rem] flex justify-center items-center"
           >
-            <Link
-              to="/select-seat"
-              state={{ movietitle: movie.movietitle }} // Pass movietitle as state
-            >
+            <Link to="/select-seat" state={{ movietitle: movie.movietitle }}>
               <img
                 src={`${baseURL}${movie.posterPath}`} // Prepend base URL
                 alt={movie.movietitle}
