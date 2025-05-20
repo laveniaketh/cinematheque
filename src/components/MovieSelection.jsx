@@ -1,71 +1,50 @@
 import React from "react";
-import { Carousel } from "flowbite-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import { EffectFade, Controller } from "swiper/modules";
 
-const MovieSelection = () => {
-  const movies = [
-    {
-      title: "Movie 1",
-      year: "2024",
-      director: "John Doe",
-      plot: "A thrilling story of adventure and discovery.",
-      image: "https://flowbite.com/docs/images/carousel/carousel-1.svg",
-    },
-    {
-      title: "Movie 2",
-      year: "2023",
-      director: "Jane Smith",
-      plot: "An emotional journey of love and sacrifice.",
-      image: "https://flowbite.com/docs/images/carousel/carousel-2.svg",
-    },
-    {
-      title: "Movie 3",
-      year: "2022",
-      director: "Emily Johnson",
-      plot: "A science fiction tale that questions reality.",
-      image: "https://flowbite.com/docs/images/carousel/carousel-3.svg",
-    },
-    {
-      title: "Movie 4",
-      year: "2021",
-      director: "Robert Brown",
-      plot: "A mysterious thriller with unexpected twists.",
-      image: "https://flowbite.com/docs/images/carousel/carousel-4.svg",
-    },
-    {
-      title: "Movie 5",
-      year: "2020",
-      director: "Anna Wilson",
-      plot: "A heartwarming comedy about family and friendship.",
-      image: "https://flowbite.com/docs/images/carousel/carousel-5.svg",
-    },
-  ];
+const MovieSelection = ({ movies, setSwiperInstance, swiperInstance }) => {
+  const baseURL = "http://localhost:8000"; // Base URL for the backend
 
   return (
-    <div className="w-full h-screen">
-      <Carousel
-        slideInterval={5000}
-        className="w-full h-full overflow-hidden hide-scrollbar"
-        indicators={false}
+    <div className="w-screen h-screen flex items-center justify-center bg-gradient-to-r from-[#1E1E2F] to-[#2A2A3D]">
+      <Swiper
+        effect={"fade"}
+        onSwiper={setSwiperInstance}
+        controller={{ control: swiperInstance }}
+        modules={[EffectFade, Controller]}
+        className="w-full h-full bg-[#171718]"
       >
         {movies.map((movie, index) => (
-          <div key={index} className="relative w-full h-full">
-            {/* Movie Image */}
+          <SwiperSlide
+            key={index}
+            className="relative flex justify-center items-center"
+          >
+            {/* Background Image */}
             <img
-              src={movie.image}
-              alt={movie.title}
-              className="w-full h-full object-cover"
+              src={`${baseURL}${movie.previewPath}`} // Prepend base URL
+              alt={movie.movietitle}
+              className="w-full h-full object-cover transition-all duration-200 ease-in-out"
             />
+
+            {/* Dark Fading Gradient */}
+            <div className="absolute bottom-0 left-0 right-0 h-[25rem] bg-gradient-to-t from-[#171718] via-[#171718]/90 " />
+
             {/* Movie Details */}
-            <div className="absolute bottom-0 left-0 right-0  p-6 text-white">
-              <h2 className="text-4xl font-bold">{movie.title}</h2>
-              <p className="text-lg">
-                {movie.year} • Directed by {movie.director}
+            <div className="absolute bottom-20 left-0 right-0 pl-20 text-white w-[55rem] ">
+              <h2 className="text-7xl font-bold ">{movie.movietitle}</h2>
+              <p className="text-lg font-light mb-4 mt-1">
+                {movie.releasedYear} • Directed by {movie.director}
               </p>
-              <p className="text-md mt-2">{movie.plot}</p>
+              <p className="text-md font-light mb-2">{movie.summary}</p>
+              <p className="text-xl font-semibold mb-2">
+                ₱200.00 • {movie.timeslot}
+              </p>
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </Carousel>
+      </Swiper>
     </div>
   );
 };

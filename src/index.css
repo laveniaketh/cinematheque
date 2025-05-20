@@ -4,12 +4,13 @@
 
 @import "tailwindcss";
 @import "flowbite/src/themes/default";
+
 @plugin "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
 @plugin "flowbite/plugin";
-@plugin "daisyui" {
+/* @plugin "daisyui" {
   themes: light --default;
-}
+} */
 @theme {
   --color-primary: #171718;
 

@@ -22,12 +22,12 @@ const CountdownTimer = () => {
   return (
     <div className="flex flex-col items-center justify-center h-full">
       {finished ? (
-        <p className="text-xl  text-white  px-64">
+        <p className="text-2xl font-semibold text-white  px-50">
           Proceed to facilitator for payment. Thank you and come again!
         </p>
       ) : (
         <>
-          <p className="text-xl text-white  px-64">
+          <p className="text-xl font-semibold text-white  px-50">
             Generating your ticket... Please wait.
           </p>
           <span className="countdown text-6xl text-white font-bold flex items-center justify-center">
